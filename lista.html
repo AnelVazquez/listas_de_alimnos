@@ -1,0 +1,47 @@
+import React, { useState } from "react";
+import ReactDOM from "react-dom";
+
+import "./index.js";
+import "./index.php";
+
+function App() {
+  document.location.href = "index.php";
+
+  function enviar(evt) {
+    console.log("Anel:", "$Anel");
+    console.log("Vanesa:", "$Vanesa");
+    console.log("Daniela", "$Daniela");
+    console.log("Ian", "$Ian");
+   
+  }
+
+  return (
+    <div>
+      <h1>Lista</h1>
+      <p>
+        Nombre:
+        <input placeholder="Anel" />
+      </p>
+
+      <p>
+        apellido:
+        <input placeholder="Vanesa" />
+      </p>
+
+      <p>
+        correo:
+        <input placeholder="Daniela" />
+      </p>
+
+      <p>
+        telefono:
+        <input placeholder="Ian" />
+      </p>
+
+      <button onClick={enviar}>Registrar</button>
+    </div>
+  );
+}
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
